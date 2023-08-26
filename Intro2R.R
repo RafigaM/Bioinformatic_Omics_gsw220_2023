@@ -9,6 +9,6 @@ install.packages("randomForests")
 # get the installer package if you don't have
 install.packages("BiocManager")
 
-# install bioconductor package "rtracklayer"
-BiocManager::install("rtracklayer")
+# install bioconductor package "DESeq2"
+BiocManager::install("DESeq2")
 
