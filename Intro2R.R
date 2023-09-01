@@ -146,6 +146,21 @@ x
 typeof(x)
 
 
+### Writing functions in R
+####
+# Here is the main syntax on functions in R:
+# function_name <- function(parameters){
+#   function body 
+# }
+
+vec=c(1,2,4,5,6,7,8,9)
+power2=function(x){
+  x_power2=x^2
+  return(x_power2)
+}
+vec_power2=power2(vec)
+lapply(vec,power2)
+
 
 
 
