@@ -48,6 +48,25 @@ abs(3-7)      # Absolute value of 3-7
 pi             # The number
 exp(2)        # exponential function
 
+### if and for
+# if (test_expression) {
+#   statement1
+# } else {
+#   statement2
+# }
+x <- -5
+if(x > 0){
+  print("Non-negative number")
+} else {
+  print("Negative number")
+}
+
+#Creat multiplication table with "for" iterator
+for(x in 1:10) {
+  y=2*x
+  print(paste("2 x ", x, " = ", y), sep="")
+}
+
 ###
 ### Data structures
 
