@@ -1,1 +1,7 @@
+1. Modern Statistics for Modern Biology, by Susan Holmes and Wolfgang Huber, Cambridge University Press (2019). ISBN: 9781108705295. License: CC BY-NC-SA
+2. An Introduction to R. Alex Douglas, Deon Roos, Francesca Mancini, Ana Couto & David Lusseau (https://intro2r.com/)
+3. Computational Genomics with R. Altuna Akalin
+4. https://statsandr.com/
+5. Mary E. Piper, Meeta Mistry, Jihe Liu, William J. Gammerdinger, & Radhika S. Khetani. (2022, January 10). hbctraining/Intro-to-rnaseq-hpc-salmon-flipped: Introduction to RNA-seq using Salmon Lessons from HCBC (first release). Zenodo. https://doi.org/10.5281/zenodo.5833880
+
 
