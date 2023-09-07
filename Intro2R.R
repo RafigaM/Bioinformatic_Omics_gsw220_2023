@@ -20,10 +20,6 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install()
 ###
-### Installing packages in custom locations
-#This is done by setting up an .Renviron file in your home directory and add the following line:
-#see help(Startup) for broader info. to set up renviron ‘R_HOME/etc/Renviron.site’ is used 
-R_LIBS=~/Rlibs
 
 #You can get help on functions by using help() and help.search() functions. 
 #You can list the functions in a package with the ls() function
