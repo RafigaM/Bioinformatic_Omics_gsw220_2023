@@ -6,8 +6,8 @@
 
 install.packages("grangers")
 
-enhancerFilePath="/Users/rafigamasmaliyeva/Downloads/subset.enhancers.hg18.bed"
-cpgiFilePath=system.file="/Users/rafigamasmaliyeva/Downloads/subset.cpgi.hg18.bed"
+enhancerFilePath="./subset.enhancers.hg18.bed"
+cpgiFilePath=system.file="./subset.cpgi.hg18.bed"
 # read enhancer marker BED file
 enh.df <- read.table(enhancerFilePath, header = FALSE) 
 
