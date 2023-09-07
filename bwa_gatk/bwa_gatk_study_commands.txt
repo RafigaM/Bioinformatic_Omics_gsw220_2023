@@ -1,0 +1,26 @@
+wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R1.fastq.gz
+wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz
+https://www.ncbi.nlm.nih.gov/nuccore/CP000325.1
+
+bwa index index/ref_sequence.fasta
+bwa mem -t 8 index/ref_sequence.fasta P7741_R1.fastq.gz P7741_R2.fastq.gz > output.sam
+samtools view -b output.sam > output.bam
+samtools sort -o output.sorted.bam output.bam
+====
+bwa mem -t 8 index/ref_sequence.fasta P7741_R1.fastq.gz P7741_R2.fastq.gz |samtools sort -o output.sorted.bam
+=====
+samtools faidx ./index/ref_sequence.fasta 
+gatk CreateSequenceDictionary -R ./index/ref_sequence.fasta
+
+gatk --java-options "-Xmx4g" HaplotypeCaller  \
+   -R ref_sequence.fasta \
+   -I output.sorted.bam \
+   -O output.vcf.gz
+
+samtools addreplacerg -r '@RG\tID:samplename\tSM:samplename' output.sorted.bam -o output.sorted2.bam
+samtools index /home/bioprogrammer/bwa_study/output.sorted2.bam
+
+gatk --java-options "-Xmx4g" HaplotypeCaller  \
+   -R ref_sequence.fasta \
+   -I output.sorted2.bam \
+   -O output.vcf.gz
