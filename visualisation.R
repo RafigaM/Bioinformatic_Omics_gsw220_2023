@@ -3,8 +3,6 @@
 # One of the popular formats is the BED format, which is used primarily by the UCSC genome browser but most other genome browsers 
 # and tools will support the BED file format. We have all the annotation data in BED format. 
 
-install.packages("grangers")
-
 enhancerFilePath="./files/subset.enhancers.hg18.bed"
 cpgiFilePath=system.file="./files/subset.cpgi.hg18.bed"
 # read enhancer marker BED file
@@ -82,6 +80,7 @@ dev.off()
 ###
 #In R, there are other plotting systems besides “base graphics”, which is called ggplot2
 #which implements a different logic when constructing the plots. 
+install.packages("ggplot2")
 library(ggplot2)
 
 myData=data.frame(col1=x,col2=y)
