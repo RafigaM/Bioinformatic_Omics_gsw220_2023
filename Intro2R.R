@@ -140,7 +140,9 @@ w$age
 # V Factors
 # Factors are used to store categorical data. 
 features=c("promoter","exon","intron")
-f.feat=factor(features)
+f=factor(features)
+print(f)
+f[1]
 
 
 #There are four common data types in R, they are numeric, logical, character and integer. 
