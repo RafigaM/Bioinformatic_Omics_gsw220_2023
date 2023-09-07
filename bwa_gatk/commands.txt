@@ -1,3 +1,22 @@
+# Complete the installation with bioconda configuration
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
+# Create environment named bioinfo
+conda create -n bioinfo
+
+# Activate the environment
+conda activate bioinfo
+
+# Install packages bwa and gatk
+conda install -c bioconda bwa gatk4
+
+
+
+
+
 wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R1.fastq.gz
 wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz
 https://www.ncbi.nlm.nih.gov/nuccore/CP000325.1
