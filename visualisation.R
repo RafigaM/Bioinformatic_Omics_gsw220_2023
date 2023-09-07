@@ -2,7 +2,6 @@
 # That means mostly the data will be in table format with columns denoting chromosome, start positions, end positions, strand and score. 
 # One of the popular formats is the BED format, which is used primarily by the UCSC genome browser but most other genome browsers 
 # and tools will support the BED file format. We have all the annotation data in BED format. 
-# You will read more about data formats in Chapter 6. In R, you can easily read tabular format data with the read.table() function.
 
 install.packages("grangers")
 
