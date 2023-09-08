@@ -1,0 +1,26 @@
+## download raw data and reference for them
+wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R1.fastq.gz
+wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz
+#download fasta file from link below
+https://www.ncbi.nlm.nih.gov/nuccore/CP000325.1
+
+bwa index sequence.fasta
+##align your sequences to the reference
+bwa mem -t 8 sequence.fasta P7741_R1.fastq.gz P7741_R2.fastq.gz > output.sam
+##sort and index your data
+samtools view -b output.sam > output.bam
+samtools sort -o output.sorted.bam output.bam
+samtools index output.sorted.bam
+#index your reference
+samtools faidx ./index/ref_sequence.fasta 
+#call variants
+
+gatk4 --java-options "-Xmx4g" HaplotypeCaller  \
+   -R sequence.fasta \
+   -I output.sorted2.bam \
+   -O output.vcf.gz
+   
+#### 
+####
+#I case you get error related to bam file, run the command below BEFORE INDEXING BAM or run this and run indexing again
+samtools addreplacerg -r '@RG\tID:samplename\tSM:samplename' output.sorted.bam -o output.sorted.bam
