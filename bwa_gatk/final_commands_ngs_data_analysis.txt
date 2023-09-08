@@ -22,5 +22,5 @@ gatk4 --java-options "-Xmx4g" HaplotypeCaller  \
    
 #### 
 ####
-#I case you get error related to bam file, run the command below BEFORE INDEXING BAM or run this and run indexing again
+#I case you get error related to bam file, run the command below BEFORE INDEXING BAM or run this and run indexing again (line 13)
 samtools addreplacerg -r '@RG\tID:samplename\tSM:samplename' output.sorted.bam -o output.sorted.bam
