@@ -20,3 +20,7 @@ conda install -c bioconda bwa gatk4
 wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R1.fastq.gz
 wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz
 https://www.ncbi.nlm.nih.gov/nuccore/CP000325.1
+
+
+http://www.ensembl.org/info/genome/variation/prediction/predicted_data.html
+http://www.ensembl.org/info/genome/variation/prediction/predicted_data.html
