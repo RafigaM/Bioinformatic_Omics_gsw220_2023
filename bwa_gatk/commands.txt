@@ -23,4 +23,4 @@ https://www.ncbi.nlm.nih.gov/nuccore/CP000325.1
 
 
 http://www.ensembl.org/info/genome/variation/prediction/predicted_data.html
-http://www.ensembl.org/info/genome/variation/prediction/predicted_data.html
+https://www.ensembl.org/Homo_sapiens/Tools/VEP
