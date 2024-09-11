@@ -5,6 +5,7 @@ wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz
 https://www.ncbi.nlm.nih.gov/nuccore/CP000325.1
 
 
+##index the reference sequence
 bwa index sequence.fasta
 ##align your sequences to the reference
 bwa mem -t 8 sequence.fasta P7741_R1.fastq.gz P7741_R2.fastq.gz > output.sam
