@@ -20,10 +20,10 @@ samtools index output.sorted.bam
 9.	Index your reference for variant calling:
 samtools faidx CP000325.1.fasta
 10.	Prepare dictionary for your reference choose one way to use it for yourself:
-a.	On HPC cluster (after loading picard):
-java -jar $EBROOTPICARD/picard.jar CreateSequenceDictionary R=CP000325.1.fasta O=CP000325.1.dict
-b.	On your computer with jar file:
-java -jar picard.jar CreateSequenceDictionary R=CP000325.1.fasta O=CP000325.1.dict
+a.	On HPC cluster (after loading picard):<br />
+java -jar $EBROOTPICARD/picard.jar CreateSequenceDictionary R=CP000325.1.fasta O=CP000325.1.dict<br />
+b.	On your computer with jar file:<br />
+java -jar picard.jar CreateSequenceDictionary R=CP000325.1.fasta O=CP000325.1.dict<br />
 c.	With installed picard:
 picard CreateSequenceDictionary R=CP000325.1.fasta O=CP000325.1.dict
 11.	Call variants with GATK Haplotypecaller:
