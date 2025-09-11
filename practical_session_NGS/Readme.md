@@ -1,15 +1,14 @@
 Aligning and variant calling workflow
 
 1.	Download the sequences:
-wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R1.fastq.gz
-wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz
+wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R1.fastq.gz<br />
+wget http://ftp.sra.ebi.ac.uk/vol1/run/ERR333/ERR3335404/P7741_R2.fastq.gz<br />
 2.	Download the reference:
 https://www.ebi.ac.uk/ena/browser/view/CP000325
 3.	Index the reference sequence for alignment:
 bwa index CP000325.1.fasta
 4.	align your sequences to the reference
 bwa mem -t 8 CP000325.1.fasta P7741_R1.fastq.gz P7741_R2.fastq.gz > output.sam
-
 5.	Convert sam file to a bam file:
 samtools view -b output.sam > output.bam
 6.	Fix the headers in your bam file:
